@@ -1,0 +1,189 @@
+/* ================================
+   ATVision Dark Purple Theme
+   ================================ */
+
+/* General app layout */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f1f;
+  color: #fff;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* -------------------------------
+   Sidebar
+--------------------------------- */
+.sidebar {
+  width: 220px;
+  background: #1a0f2b;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.nav-item, .sub-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav-item span {
+  margin-left: 10px;
+}
+
+.nav-item:hover, .sub-item:hover {
+  background: #2b1a45;
+  cursor: pointer;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  background: #180d35;
+}
+
+/* Sub-item indent */
+.sub-item {
+  padding-left: 40px;
+  font-size: 13px;
+}
+
+/* -------------------------------
+   Topbar
+--------------------------------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f0f3b;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.topbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.topbar-left-logo img {
+  height: 40px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-time {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.user-profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* -------------------------------
+   Main content / Pages
+--------------------------------- */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* -------------------------------
+   Tables
+--------------------------------- */
+.device-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.device-table th, .device-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #2b1a45;
+}
+
+.device-table tr:hover {
+  background: #2b1a45;
+  cursor: pointer;
+}
+
+/* -------------------------------
+   Panels / Graphs
+--------------------------------- */
+.device-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.device-panels .graph-placeholder {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a2b;
+  border-radius: 8px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Panel headings */
+.device-panels h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* -------------------------------
+   Responsive
+--------------------------------- */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .topbar-left-logo img {
+    height: 30px;
+  }
+
+  .nav-item, .sub-item {
+    font-size: 13px;
+  }
+}
